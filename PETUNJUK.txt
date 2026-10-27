@@ -1,0 +1,22 @@
+SiAbsen GURU — Paket PWA
+
+ISI PAKET
+- index.html: aplikasi dengan dukungan instalasi PWA ditambahkan
+- manifest.json: nama aplikasi, ikon, dan mode standalone
+- service-worker.js: cache shell aplikasi; tidak menyimpan data presensi/API
+- offline.html: pemberitahuan ketika koneksi terputus
+- icons/: ikon aplikasi
+
+CARA MEMASANG DI HOSTING
+1. Unggah SEMUA isi folder ini ke root situs HTTPS (misalnya hosting statis yang mendukung HTTPS). Jangan hanya mengunggah index.html.
+2. Pastikan index.html, manifest.json, service-worker.js, offline.html, dan folder icons berada di direktori yang sama sesuai struktur ZIP.
+3. Buka URL situs tersebut di Chrome Android dan tunggu hingga halaman selesai dimuat.
+4. Ketuk tombol “Instal Aplikasi” jika muncul, atau menu Chrome (⋮) > “Instal aplikasi” / “Tambahkan ke layar utama”.
+5. Buka SiAbsen GURU dari ikon di layar utama.
+
+CATATAN PENTING
+- PWA bukan aplikasi offline penuh. Login, data, dan sinkronisasi absensi tetap membutuhkan internet dan layanan Firebase yang telah dikonfigurasi.
+- Kamera dan lokasi memerlukan izin perangkat dan situs HTTPS.
+- Service worker hanya membantu membuka shell/halaman saat koneksi terganggu; ia tidak menyimpan atau mengirim absensi secara offline.
+- Sebelum dipakai guru sungguhan, uji login, jadwal, lokasi, kamera, dan simpan absensi di URL HTTPS. Pastikan aturan keamanan Firebase membatasi akses sesuai peran.
+- Jika aplikasi dipasang di subfolder, tetap unggah semua file dengan struktur folder yang sama.
